@@ -1,29 +1,35 @@
 #include <stdio.h>
-#include <assert.h>
-void Six_prog1()
+
+int test(int a[])
 {
-	float a[20];
-	int i, count, max, min;
-	printf("输入实际数据个数(不超过20):");
-	scanf("%d", &count);
-	assert(count <= 20);
-	printf("输入%d个数据:", count);
-	for (i = 0; i < count; i++)
-		scanf("%f", &a[i]);
-	max = min = 0;
-	for (i = 0; i < count; i++)
-	{
-		if (a[i + 1] <= a[i] && a[i - 1] <= a[i])
-			max = i;
-		else if (a[i + 1] >= a[i] && a[i - 1] >= a[i])
-			min = i;
-	}
-	printf("输出结果:\n");
-	printf("最大值为:%.2f 其下标为:%d\n", i, max);
-	printf("最大值为:%.2f 其下标为:%d\n", i, min);
+	printf("%p", a);
+	printf("\n");
+
+	printf("%p", a + 1);
+	printf("\n");
+
+	printf("%p", &a);
+	printf("\n");
+
+	printf("%p", &a + 1);
+	printf("\n");
 }
 int main()
 {
-	Six_prog1();
+	int num[5] = { 1,2,3,4,5 };
+
+	test(num);
+	printf("%p", num);
+	printf("\n");
+
+	printf("%p", num + 1);
+	printf("\n");
+
+	printf("%p", &num);
+	printf("\n");
+
+	printf("%p", &num + 1);
+	printf("\n");
+
 	return 0;
 }
