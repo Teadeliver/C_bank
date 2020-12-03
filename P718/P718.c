@@ -1,18 +1,18 @@
 #include<stdio.h>
 
-int caculate(int n);
+double caculate(double n);
 
 int main()
 {
-	int n,array;
+	double n,array;
 
 	printf("Input n (13>=n>=2): ");
-	scanf("%d", &n);
+	scanf("%lf", &n);
 	array = caculate(n);
-	printf("\nf(%d)=%d\n", n, array);
+	printf("\nf(%.0lf)=%.0lf\n", n, array);
 	return 0;
 }
-int caculate(int n)
+double caculate(double n)
 {
 	if (n == 0)
 	{
