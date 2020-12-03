@@ -28,4 +28,3 @@ int caculate(int n)
 	}
 	return (2 * caculate(n - 1) + (caculate(n - 2) * caculate(n - 3)));
 }
-//f(0)=0,f(1)=1,f(2)=2,  f(n+1)=2f(n)+f(n-1)f(n-2)
