@@ -1,23 +1,30 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-int main()
+int main(void)
 {
-	char string[100] = {' '};
-	int i = 0, j;
+	int ch, i = 0;
+	char string[101];
+
 	printf("input a string: ");
-	while((string[i] = getchar()) != '\n')
+	ch = getchar();
+	while ((char)ch != '\n' && ch != EOF)
 	{
-		if (i == 99)
+		if (i < 100)
+		{
+			string[i] = (char)ch;
+			i++;
+		}
+		else
 		{
 			break;
 		}
-		i++;
+		ch = getchar();
 	}
-	printf("\nThe string lenth is: %d", i+1);
-	printf("\nThe string is: ");
-	for (j = 0; j <= i; j++)
-	{
-		printf("%c", string[j]);
-	}
+	string[i] = '\0';
+
+	printf("\nThe string lenth is: %d\n", i);
+	printf("\nThe string is: %s\n", string);
+
 	return 0;
 }

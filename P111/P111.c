@@ -1,28 +1,28 @@
 #define _CRT_SECURE_NO_WARNINGS 1
-#include <stdio.h>
-
-int main(void)
+#include<stdio.h>
+int main()
 {
 	int x;
 	double y;
 
-	printf("\nPlease input x:"); //在屏幕上输出提示语
-	scanf("%d", &x); //从键盘输入一个十进制整数赋给变量x
-
-	if (x < 0) //x小于0 
+	printf("Please input x: ");
+	scanf("%d", &x);
+	if (x < 0)
 	{
-		y = (double)(-5) * x + 27;
+		y = (-5 * (double)x) + 27;
+		printf("\nF(%d) = %.0lf", x, y);
 	}
-	else if (0 == x) //x等于0
+	else
 	{
-		y = (double)7909;
+		if (x == 0)
+		{
+			printf("\nF(%d) = 79097", x);
+		}
+		else
+		{
+			y = (2 * (double)x) - 1;
+			printf("\nF(%d) = %.0lf", x, y);
+		}
 	}
-	else //x大于0
-	{
-		y = (double)2 * x - 1;
-	}
-
-	printf("\nF(%d) = %.0f", x, y); //按题目规定格式输出x和y的值
-
 	return 0;
 }
