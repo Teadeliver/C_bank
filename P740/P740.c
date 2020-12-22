@@ -17,7 +17,7 @@ int main()
 			{
 				if ((x + y + z == num) && ((5 * x + 3 * y + z / 3) == money))
 				{
-					printf("  %d   %d %d\n", x, y, z);
+					printf("%6d%6d%6d\n", x, y, z); //输出公鸡、母鸡和小鸡的数量
 				}
 			}
 		}

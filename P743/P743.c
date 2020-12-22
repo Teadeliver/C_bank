@@ -2,7 +2,7 @@
 
 int main(void)
 {
-	char ch[127];
+	char ch[128];
 	int i, count = 0;
 
 	for (i = 0; i < 127; i++)
@@ -19,7 +19,7 @@ int main(void)
 	}
 	for (; count >= 0; count--)
 	{
-		printf("%c", ch[count]);
+		printf("%c"	, ch[count]);
 	}
 
 	return 0;
