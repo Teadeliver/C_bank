@@ -2,20 +2,27 @@
 
 int main()
 {
-	char ch;
-	char num[127];
-	int n = 0, i;
+	char str[127];
+	int count = 0, i;
 
-	while (ch = getchar() != '\n')
+	printf("Please input string: ");
+	gets(str);
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (ch >= 45 && ch <= 57)
+		if (str[i] >= '0' && str[i] <= '9')
 		{
-			n++;
+			count++;
 		}
 	}
-	for (i = 0; i < n; i++)
+	printf("\nshu zi ge shu wei: %d", count);
+	printf("\nshu zi wei: ");
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		printf("%d", num[i]);
+		if (str[i] >= '0' && str[i] <= '9')
+		{
+			printf("%c", str[i]);
+
+		}
 	}
 	return 0;
 }

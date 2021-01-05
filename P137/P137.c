@@ -4,8 +4,8 @@
 
 int main()
 {
-	char ch1[10];
-	char ch2[10];
+	char ch1[8];
+	char ch2[8];
 	printf("请输入姓名1: ");
 	gets(ch1);
 	printf("请输入姓名2: ");
