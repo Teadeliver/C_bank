@@ -9,45 +9,85 @@ int main(void)
 	printf("please input the score: ");
 	scanf("%d", &score);
 
-	switch (score / 10)
+
+	if (score > 100)
 	{
-	case 10:
-	case 9:
-		grade = 'A';
-		break;
-	case 8:
-		grade = 'B';
-		break;
-	case 7:
-		grade = 'C';
-		break;
-	case 6:
-		grade = 'D';
-		break;
-	case 5:
-		grade = 'E';
-		break;
-	case 4:
-		grade = 'F';
-		break;
-	case 3:
-		grade = 'G';
-		break;
-	case 2:
-		grade = 'H';
-		break;
-	case 1:
-		grade = 'I';
-		break;
-	case 0:
-		grade = 'J';
-		break;
-	default:
 		grade = 'X';
-		break;
 	}
-
+	else
+	{
+		if (score >= 90)
+		{
+			grade = 'A';
+		}
+		else
+		{
+			if (score >= 80)
+			{
+				grade = 'B';
+			}
+			else
+			{
+				if (score >= 70)
+				{
+					grade = 'C';
+				}
+				else
+				{
+					if (score >= 60)
+					{
+						grade = 'D';
+					}
+					else
+					{
+						if (score >= 50)
+						{
+							grade = 'E';
+						}
+						else
+						{
+							if (score >= 40)
+							{
+								grade = 'F';
+							}
+							else
+							{
+								if (score >= 30)
+								{
+									grade = 'G';
+								}
+								else
+								{
+									if (score >= 20)
+									{
+										grade = 'H';
+									}
+									else
+									{
+										if (score >= 10)
+										{
+											grade = 'I';
+										}
+										else
+										{
+											if (score >= 0)
+											{
+												grade = 'J';
+											}
+											else
+											{
+												grade = 'X';
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 	printf("\nscore=%d, grade=%c\n", score, grade);
-
 	return 0;
 }
