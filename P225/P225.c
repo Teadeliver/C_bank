@@ -7,9 +7,9 @@ int main()
 	printf("Please Input a number: ");
 	scanf("%d", &Num);
 	printf("\nResult: ");
-	for (ge = 0; ge <= 9; ge++)
+	for (bai = 1; bai <= 9; bai++)
 		for (shi = 0; shi <= 9; shi++)
-			for (bai = 1; bai <= 9; bai++)
+			for (ge = 0; ge <= 9; ge++)
 			{
 				if (Num == ge * ge * ge + shi * shi * shi + bai * bai * bai)
 				{

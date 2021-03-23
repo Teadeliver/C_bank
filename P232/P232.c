@@ -1,1 +1,27 @@
 #define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+int main()
+{
+	int Num, num;
+	int ge, shi, bai;
+	int flag = 0;
+	printf("Please Input a number: ");
+	scanf("%d", &Num);
+	printf("\nResult: ");
+	for (bai = 1; bai <= 9; bai++)
+		for (shi = 0; shi <= 9; shi++)
+			for (ge = 0; ge <= 9; ge++)
+			{
+				if (Num == ge  * ge +  shi * shi +  bai * bai)
+				{
+					num = ge + shi * 10 + bai * 100;
+					printf("%5d", num);
+					flag = 1;
+				}
+			}
+	if (flag == 0)
+	{
+		printf("not Find!\n");
+	}
+	return 0;
+}
