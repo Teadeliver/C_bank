@@ -1,34 +1,43 @@
 #include <stdio.h>
-#define ROW 2
-#define COL 3
-void TransMatrix(int(*iSMatrix)[COL], int(*iTMatrix)[ROW]);
-void DisplayTarget(int(*iMatrix)[ROW]);
-int main(void)
+//int main()
+//{
+//	struct student
+//	{
+//		int    num;
+//		char   name[20];
+//		char   gender[3];
+//		int    age;
+//		float  score;
+//		char   addr[30];
+//	};
+//	struct student stu;
+//	scanf("%d,%s,%s,%d,%f,%s", &stu.num, stu.name, stu.gender, &stu.age, &stu.score, stu.addr);
+//	printf("No: %d\n", stu.num);
+//	printf("Name: %s\n", stu.name);
+//	printf("Gender: %s\n", stu.gender);
+//	printf("Age:%d\n", stu.age);
+//	printf("Score:%f\n", stu.score);
+//	printf("Addr:%s\n", stu.addr);
+//	return 0;
+//}
+
+//1 令狐冲 男 18 90 chengdu
+//1,令狐冲,男,18,90,chengdu、
+int main()
 {
-    int iArray[ROW][COL] = { {1,2,3},{4,5,6 } };
-    int iRevArray[COL][ROW];
-    //自行添加代码实现对数组iArray进行输入,便于验证
-    TransMatrix(iArray, iRevArray);//调用函数TransMatrix()完成转置
-    printf("After Trans:\n");
-    DisplayTarget(iRevArray);//调用函数DisplayTarget()完成转置后的矩阵输出
-    return 0;
-}
-void TransMatrix(int(*iSMatrix)[COL], int(*iTMatrix)[ROW])
-{
-    int i, j;
-    for (i = 0; i <ROW; i++)
-        for (j = 0; j <COL; j++)
-            *(*(iTMatrix +j)+i) = *(*(iSMatrix + i) + j);
-}
-void DisplayTarget(int(*iMatrix)[ROW])
-{
-    int i, j;
-    for (i = 0; i <COL; i++)
-    {
-        printf("第%d行：", i);
-        for (j = 0; j <ROW; j++)
-            printf("%d\t", *(*(iMatrix + i) + j));
-        printf("\n");//输出每行后换行
-    }
+	struct days
+	{
+		int year;
+		int mouth;
+		int day;
+	};
+	struct dec
+	{
+		int x;
+		int y;
+	};
+	struct days today[2] = { {2021,3,30 },{2021,3,31} };
+	printf("Today is %d/%d/%d", today[0].year, today->mouth, today[0].day);
+	printf("Tomorow is %d/%d/%d", today[1].year, (today+1)->mouth, (today+1)->day);
 
 }
