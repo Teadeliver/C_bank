@@ -71,9 +71,3 @@ int caculate(STU* myClass)
 }
 
 
-
-//2001 wanghai    78   83.5 90
-//2003 zhangzhong 82   80   98.5
-//2005 liumei     95.2 81   90
-//2006 sunqian    70   77.2 90
-//2009 jiansansa  63   87   90.3

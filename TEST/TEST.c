@@ -1,43 +1,22 @@
-#include <stdio.h>
-//int main()
-//{
-//	struct student
-//	{
-//		int    num;
-//		char   name[20];
-//		char   gender[3];
-//		int    age;
-//		float  score;
-//		char   addr[30];
-//	};
-//	struct student stu;
-//	scanf("%d,%s,%s,%d,%f,%s", &stu.num, stu.name, stu.gender, &stu.age, &stu.score, stu.addr);
-//	printf("No: %d\n", stu.num);
-//	printf("Name: %s\n", stu.name);
-//	printf("Gender: %s\n", stu.gender);
-//	printf("Age:%d\n", stu.age);
-//	printf("Score:%f\n", stu.score);
-//	printf("Addr:%s\n", stu.addr);
-//	return 0;
-//}
-
-//1 令狐冲 男 18 90 chengdu
-//1,令狐冲,男,18,90,chengdu、
-int main()
+#include<stdio.h>
+#include <math.h>
+struct point
 {
-	struct days
-	{
-		int year;
-		int mouth;
-		int day;
-	};
-	struct dec
-	{
-		int x;
-		int y;
-	};
-	struct days today[2] = { {2021,3,30 },{2021,3,31} };
-	printf("Today is %d/%d/%d", today[0].year, today->mouth, today[0].day);
-	printf("Tomorow is %d/%d/%d", today[1].year, (today+1)->mouth, (today+1)->day);
-
+    double x;
+    double y;
+};
+struct LINE
+{
+    struct point pt1;
+    struct point pt2;
+};
+int main(void)
+{
+    struct LINE myline;
+    printf("请输入直线的第一个点坐标(pt1):x,y:");
+    scanf("%lf,%lf", &myline.pt1.x, &myline.pt1.y);
+    printf("请输入直线的第二个点坐标(pt2):x,y:");
+    scanf("%lf,%lf", &myline.pt2.x, &myline.pt2.y);
+    printf("两点之间的距离为:%.4f\n", sqrt(pow(myline.pt1.x - myline.pt2.x, 2) + pow(myline.pt1.y - myline.pt2.y, 2)));
+    return 0;
 }
