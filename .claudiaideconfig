@@ -1,0 +1,22 @@
+﻿{
+  "BackgroundImageAbsolutePath": "C:\\Users\\Coin_stars\\OneDrive\\图片\\壁纸\\1007177.jpg",
+  "BackgroundImagesDirectoryAbsolutePath": "C:\\USERS\\COIN_STARS\\APPDATA\\LOCAL\\MICROSOFT\\VISUALSTUDIO\\16.0_44E88C26\\EXTENSIONS\\B4JJEMOO.YCO\\Images",
+  "ExpandToIDE": false,
+  "Extensions": ".png, .jpg, .gif, .bmp",
+  "ImageBackgroundType": 0,
+  "ImageFadeAnimationInterval": "PT0S",
+  "ImageStretch": 0,
+  "IsLimitToMainlyEditorWindow": false,
+  "LoopSlideshow": false,
+  "MaxHeight": 0,
+  "MaxWidth": 0,
+  "Opacity": 0.15,
+  "PositionHorizon": 2,
+  "PositionVertical": 2,
+  "ShuffleSlideshow": false,
+  "SoftEdgeX": 0,
+  "SoftEdgeY": 0,
+  "UpdateImageInterval": "PT1M",
+  "ViewBoxPointX": 0,
+  "ViewBoxPointY": 0
+}

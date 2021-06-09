@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="P804.C">
+    <ClCompile Include="D1033.C">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

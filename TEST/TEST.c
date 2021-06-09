@@ -1,22 +1,57 @@
 #include<stdio.h>
-#include <math.h>
-struct point
+typedef struct student
 {
-    double x;
-    double y;
-};
-struct LINE
+    int num;
+    struct student* next;
+}STU;
+int main()
 {
-    struct point pt1;
-    struct point pt2;
-};
-int main(void)
-{
-    struct LINE myline;
-    printf("请输入直线的第一个点坐标(pt1):x,y:");
-    scanf("%lf,%lf", &myline.pt1.x, &myline.pt1.y);
-    printf("请输入直线的第二个点坐标(pt2):x,y:");
-    scanf("%lf,%lf", &myline.pt2.x, &myline.pt2.y);
-    printf("两点之间的距离为:%.4f\n", sqrt(pow(myline.pt1.x - myline.pt2.x, 2) + pow(myline.pt1.y - myline.pt2.y, 2)));
+    int i;
+    STU test, test1, test2;
+    STU* head1 = NULL, * head2 = NULL, * temp = NULL;
+    test.num = 0;
+    test.next = &test1;
+
+    test1.num = 1;
+    test1.next = &test2;
+
+    test2.num = 2;
+    test2.next = NULL;
+
+    head1 = &test;
+    temp = head1;
+    for (i = 0; i < 3; i++)
+    {
+        printf("%d ", temp->num);
+        temp = temp->next;
+    }
+    printf("\n");
+
+    head2 = head_reverse(head1);
+    temp = head2;
+    for (i = 0; i < 3; i++)
+    {
+        printf("%d ", temp->num);
+        temp = temp->next;
+    }
     return 0;
+}
+STU* head_reverse(STU* head)
+{
+    STU* new_head = NULL;
+    STU* temp = NULL;
+    if (head == NULL || head->next == NULL)
+    {
+        return head;
+    }
+    while (head != NULL)
+    {
+        temp = head;
+        //将 temp 从 head 中摘除
+        head = head->next;
+        //将 temp 插入到 new_head 的头部
+        temp->next = new_head;
+        new_head = temp;
+    }
+    return new_head;
 }

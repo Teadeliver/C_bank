@@ -41,8 +41,8 @@ int main(void)
 int caculate(STUDENT* myclass)
 {
 	float temp = myclass[0].aver;
-	int flag;
-	for (int i = 0; i < 5; i++)
+	int flag, i;
+	for (i = 1; i < 5; i++)
 	{
 		if (temp < myclass[i].aver)
 		{
