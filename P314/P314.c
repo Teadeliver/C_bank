@@ -11,11 +11,12 @@ typedef struct
 
 int main()
 {
-	FILE* fp = fopen("sp.txt", "r");
+	FILE* fp;
 	char product_name[21] = { '0' };
 	GOODS temp;
 	int flag = 0;
 
+	fp = fopen("sp.txt", "r");
 	printf("Please input shang pin pin ming:");
 	scanf("%s", product_name);
 	while (!feof(fp))

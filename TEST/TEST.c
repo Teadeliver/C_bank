@@ -1,57 +1,43 @@
 #include<stdio.h>
-typedef struct student
+#include<string.h>
+#include<stdlib.h>
+typedef struct
 {
-    int num;
-    struct student* next;
-}STU;
+	char pm[21];
+	char gg[11];
+	long sl;
+	float dj;
+}GOOD;
 int main()
 {
-    int i;
-    STU test, test1, test2;
-    STU* head1 = NULL, * head2 = NULL, * temp = NULL;
-    test.num = 0;
-    test.next = &test1;
+	FILE* fp;
+	char spmc[21] = { '0' };
+	int flag = 0;
+	GOOD aa;
 
-    test1.num = 1;
-    test1.next = &test2;
+	printf("Please input shang pin pin ming:");
+	scanf("%s", spmc);
 
-    test2.num = 2;
-    test2.next = NULL;
-
-    head1 = &test;
-    temp = head1;
-    for (i = 0; i < 3; i++)
-    {
-        printf("%d ", temp->num);
-        temp = temp->next;
-    }
-    printf("\n");
-
-    head2 = head_reverse(head1);
-    temp = head2;
-    for (i = 0; i < 3; i++)
-    {
-        printf("%d ", temp->num);
-        temp = temp->next;
-    }
-    return 0;
-}
-STU* head_reverse(STU* head)
-{
-    STU* new_head = NULL;
-    STU* temp = NULL;
-    if (head == NULL || head->next == NULL)
-    {
-        return head;
-    }
-    while (head != NULL)
-    {
-        temp = head;
-        //将 temp 从 head 中摘除
-        head = head->next;
-        //将 temp 插入到 new_head 的头部
-        temp->next = new_head;
-        new_head = temp;
-    }
-    return new_head;
+	printf("\ncha zhao qing kuang:\n");
+	fp = fopen("sp.txt", "r");
+	if (fp == NULL)
+	{
+		printf("cannot open file!");
+		exit(1);
+	}
+	while (!feof(fp))
+	{
+		fscanf(fp, "%s %s %f %d", aa.pm, aa.gg, &aa.dj, &aa.sl);
+		if (strcmp(spmc, aa.pm) == 0)
+		{
+			flag = 1;
+			printf("%s,%s,%d,%.2f\n", aa.pm, aa.gg, aa.sl, aa.dj);
+		}
+	}
+	if (flag == 0)
+	{
+		printf("mei you shang pin :%s", spmc);
+	}
+	fclose(fp);
+	return 0;
 }
