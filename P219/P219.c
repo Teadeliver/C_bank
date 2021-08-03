@@ -1,5 +1,5 @@
 #include<stdio.h>
-
+//³¢ÊÔ½øĞĞÍÆËÍ
 int main()
 {
 	char str[127];
