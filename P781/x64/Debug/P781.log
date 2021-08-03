@@ -1,6 +1,6 @@
 ﻿  P781.c
-C:\Users\Coin_stars\source\repos\Teadeliver\C_bank\P781\P781.c(22,18): warning C4047: “=”:“char *”与“char *(*)[81]”的间接级别不同
-C:\Users\Coin_stars\source\repos\Teadeliver\C_bank\P781\P781.c(28,7): warning C4013: “gets”未定义；假设外部返回 int
-C:\Users\Coin_stars\source\repos\Teadeliver\C_bank\P781\P781.c(59,1): warning C4142: "my_str_cpy": 类型的良性重定义
-C:\Users\Coin_stars\source\repos\Teadeliver\C_bank\P781\P781.c(10): message : 参见“my_str_cpy”的声明
-  P781.vcxproj -> C:\Users\Coin_stars\source\repos\Teadeliver\C_bank\x64\Debug\P781.exe
+D:\C Project\C_bank\P781\P781.c(22,18): warning C4047: “=”:“char *”与“char *(*)[81]”的间接级别不同
+D:\C Project\C_bank\P781\P781.c(28,7): warning C4013: “gets”未定义；假设外部返回 int
+D:\C Project\C_bank\P781\P781.c(59,1): warning C4142: "my_str_cpy": 类型的良性重定义
+D:\C Project\C_bank\P781\P781.c(10): message : 参见“my_str_cpy”的声明
+  P781.vcxproj -> D:\C Project\C_bank\x64\Debug\P781.exe
