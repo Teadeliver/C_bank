@@ -16,6 +16,7 @@ void add2(int& b)//传入的相当于地址，可以直接改变main函数的a值
 void add3(int b)
 {
 	b = b + 1;
+
 }
 
 int main()
